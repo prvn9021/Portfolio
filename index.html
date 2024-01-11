@@ -3,99 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
     <title>Praveendhra Rajkumar - Portfolio</title>
 </head>
 <body>
-
     <header>
         <div class="header-content">
             <h1>Praveendhra Rajkumar</h1>
-            <p class="contact-info">+18573914257 | p.rajkumar001@umb.edu | <a href="linkedin.com/in/praveendhra/" target="_blank">LinkedIn</a></p>
+            <p class="contact-info"><a href="tel:+18573914257">+1(857)-391-4257</a> | <a href="mailto:p.rajkumar001@umb.edu.com">P.Rajkumar001@umb.edu</a> | <a href="https://www.linkedin.com/in/praveendhra/" target="_blank">LinkedIn</a></p>
         </div>
     </header>
-
-    <section id="summary">
-        <div class="container">
-            <h2>Summary</h2>
-            <p>
-                I am a dedicated Computer Science professional with a Master's from the University of Massachusetts - Boston and a Bachelor's from Anna University. Skilled
-                in diverse technologies, from Python and Java to AWS and Docker, I excel in software engineering and project management. With a track record of optimizing
-                systems, developing innovative solutions, and a passion for technological innovation, I am poised to contribute effectively in dynamic tech environments.
-            </p>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <strong>University of Massachusetts - Boston</strong><br>August 2022 - May 2024<br>Master's, Computer Science<br>GPA: 3.25
-            </div>
-            <div class="education-item">
-                <strong>Anna University</strong><br>July 2016 - May 2020<br>Bachelor's, Computer Science<br>GPA: 3.14
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <strong>University of Massachusetts - Boston</strong><br>Boston, MA, USA<br>Teaching Assistant<br>August 2022 - Present
-                <ul>
-                    <li>Collaborate on course materials and lecture slides, utilizing Microsoft PowerPoint and relevant tools.</li>
-                    <li>Facilitate weekly discussion sections for 80 students, guiding problem-solving exercises.</li>
-                    <!-- Add more details about your experience -->
-                </ul>
-            </div>
-            <div class="experience-item">
-                <strong>Zoho Corporation</strong><br>Chennai, Tamil Nadu, India<br>Member Technical Staff<br>December 2019 - August 2022
-                <ul>
-                    <li>Analyzed NGINX and improved the reverse proxy module using headers. Achieved 30% traffic boost and improved user experience with APIGateway optimization.</li>
-                    <li>Designed and built an 'Inventory Comparison Service’ to identify and reconcile configuration mismatches between Main and Disaster Recovery sites.</li>
-                    <!-- Add more details about your experience -->
-                </ul>
-            </div>
-            <!-- Add more experience items as needed -->
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects & Outside Experience</h2>
-            <div class="project-item">
-                <strong>An Intelligent System to Effectively Predict Heart Disease | Curriculum Project</strong><br>Anna University<br>Developer & Presenter
-                <ul>
-                    <li>Developed an application using Python and Machine Learning Algorithm that predicts how prone a person is to get a heart disease with a list of 13 parameters.</li>
-                    <li>Used algorithms such as Feature Extraction and Addition combined with Random Forest Classifier method to predict the results with an accuracy rate of 96%.</li>
-                    <!-- Add more details about your project -->
-                </ul>
-            </div>
-            <div class="project-item">
-                <strong>Corynack</strong><br>Anna University<br>Developer & Presenter
-                <ul>
-                    <li>Developed a web application that evaluates and monitors the capabilities of students in aptitude and technical aspects based on tests organized in the form of MCQs, QA, and Programming tracks.</li>
-                    <!-- Add more details about your project -->
-                </ul>
-            </div>
-            <!-- Add more project items as needed -->
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <p><strong>Languages:</strong> HTML/CSS, Git, Java, Python, JavaScript, MySQL, Postgres, MongoDB, Nginx, Tomcat, Flask, Linux/Unix, Data Structures & Algorithms, Docker, Java, JavaScript, JSP, Python, C programming, C/C++, HTML, Google Cloud Platform, AWS, Postman, Postgres, Apache, Flask, Docker, Windows, Arduino, RaspberryPi, IoT, Zigbee, NXT, Struts, Django, OOPS, Code Optimization, Code Refactoring, LAN, VPC, Firewall, Agile, TDD, CI/CD Pipelines, Development Operations (DevOps), AI, MedTech, Bootstrap, Computer Networking, ML, Cryptography, REST APIs, Customer Service, Figma, gRPC, jQuery, JUnit, Kubernetes, Lua, Node.js, NoSQL, OpenCV, Oracle, PHP, Product Design, Product Management, Quality Assurance (QA), Redis, Selenium, SQL, TCP/IP, TypeScript, Web Development, WebLogic, Webflow, Word/Pages/Docs, Wireshark, Mentor, Excel/Numbers/Sheets, Jupyter, Operating Systems, Cloud, Bash, Shell Scripting, Robotics</p>
-            <p><strong>Languages:</strong> Tamil</p>
-        </div>
-    </section>
-
+    <div class="sidebar">
+        <button class="side-btn" onclick="loadContent('home')">Home</button>
+        <button class="side-btn" onclick="loadContent('education')">Education</button>
+        <button class="side-btn" onclick="loadContent('work')">Work Experience</button>
+        <button class="side-btn" onclick="loadContent('projects')">Projects</button>
+        <button class="side-btn" onclick="loadContent('skills')">Skills</button>
+    </div>
+    <div id="middle">
+    </div>
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Praveendhra Rajkumar. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
+<script>
+    async function loadContent(page) {
+        try {
+            const response = await fetch(page + '.html');
+            if (!response.ok) {
+                throw new Error(`Failed to load ${page}.html`);
+            }
+            const content = await response.text();
+            document.getElementById('middle').innerHTML = content;
+        } catch (error) {
+            console.error(error);
+        }
+    }
+   loadContent('home');
+</script>
 </html>

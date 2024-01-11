@@ -3,17 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
 header {
     background-color: #333;
+    width: 100%;
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    position: fixed;
+    top: 0;
+    height: 8%;
+    z-index: 2;
 }
 
 .header-content {
-    max-width: 800px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -26,8 +32,13 @@ header {
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    top : 20%;
+    align-self: center;
+    float: right;
+    margin: 12% auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -42,14 +53,60 @@ header {
     margin-bottom: 20px;
 }
 
+.sidebar {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 32px;
+    top: 8%;
+    z-index: 1;
+}
+
+.side-btn {
+    text-decoration: none;
+    padding: 10%;
+    width: 100%;
+    color: white;
+    display: block;
+    background-color: #333;
+    border: none; /* Remove button border */
+    outline: none; /* Remove button outline */
+    text-align: left; /* Align text to the left within the button */
+}
+
+.side-btn:hover {
+    background-color: #555;
+}
+
+.icon {
+    margin-bottom: 10px;
+}
+
+#content {
+    margin-left: 10%; /* Adjust based on the width of the sidebar */
+    width: 80%;
+}
+
 footer {
     text-align: center;
-    padding: 1em 0;
+    width: 100%;
+    padding: 0.1px;
     background-color: #333;
     color: #fff;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
 }
 
 .footer-content {
     max-width: 800px;
     margin: 0 auto;
 }
+
+a:link, a:visited {
+    text-decoration: underline;
+    color : antiquewhite;
+  }
+

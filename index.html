@@ -14,11 +14,11 @@
         </div>
     </header>
     <div class="sidebar">
-        <button class="side-btn" onclick="loadContent('home')">Home</button>
-        <button class="side-btn" onclick="loadContent('education')">Education</button>
-        <button class="side-btn" onclick="loadContent('work')">Work Experience</button>
-        <button class="side-btn" onclick="loadContent('projects')">Projects</button>
-        <button class="side-btn" onclick="loadContent('skills')">Skills</button>
+        <button class="side-btn" id ="home" onclick="loadContent('home')">Home</button>
+        <button class="side-btn" id ="education" onclick="loadContent('education')">Education</button>
+        <button class="side-btn" id ="work" onclick="loadContent('work')">Work Experience</button>
+        <button class="side-btn" id ="projects" onclick="loadContent('projects')">Projects</button>
+        <button class="side-btn" id ="skills" onclick="loadContent('skills')">Skills</button>
     </div>
     <div id="middle">
     </div>
@@ -28,7 +28,9 @@
         </div>
     </footer>
 </body>
+</html>
 <script>
+    let btns = ["home", "education", "work", "projects", "skills"];
     async function loadContent(page) {
         try {
             const response = await fetch(page + '.html');
@@ -37,10 +39,13 @@
             }
             const content = await response.text();
             document.getElementById('middle').innerHTML = content;
+            for(let i=0; i<btns.length; i++) {
+                document.getElementById(btns[i]).style.backgroundColor = '';
+            }
+            document.getElementById(page).style.backgroundColor = '#555';
         } catch (error) {
             console.error(error);
         }
     }
    loadContent('home');
 </script>
-</html>

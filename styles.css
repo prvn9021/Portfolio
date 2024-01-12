@@ -284,3 +284,27 @@ ul {
 .icon-item:hover .icon-label {
     opacity: 1;
 }
+.about-me-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.fixed-content {
+    flex: 0 0 30%;
+    padding-right: 20px;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 20px;
+}

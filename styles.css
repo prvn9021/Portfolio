@@ -163,6 +163,7 @@ a:link, a:visited {
     white-space: nowrap;
     height: inherit;
     padding: 0 20px;
+    height: 80%;
 }
 
 .experience-list {
@@ -173,8 +174,8 @@ a:link, a:visited {
 }
 
 .experience-item {
-    width: 90%;
-    height: 80%;
+    width: 70%;
+    height: 97%;
     flex:0 0 auto;
     margin-right: 20px; /* Adjust spacing between cards */
     scroll-snap-align: start;

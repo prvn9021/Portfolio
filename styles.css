@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     overflow: hidden;
+    min-width: 960px;
 }
 
 header {
@@ -251,7 +252,7 @@ ul {
 
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(6, 210px); /* Set the width of each column to 70px */
+    grid-template-columns: repeat(auto-fill, 210px); /* Set the width of each column to 70px */
     gap: 10px; /* Adjust the gap between icons */
 }
 
@@ -263,8 +264,8 @@ ul {
 }
 
 .icon-item img {
-    width: 70px;
-    height: 70px;
+    width: 80%;
+    height: 80%;
     transition: transform 0.3s ease-in-out;
 }
 

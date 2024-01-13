@@ -17,6 +17,8 @@ header {
     top: 0;
     height: 8%;
     z-index: 2;
+    display: flex;
+    align-items: center;
 }
 
 .header-content {
@@ -103,10 +105,9 @@ footer {
     margin: 0 auto;
 }
 
-a:link, a:visited {
+ .education-details a:link, a:visited {
     text-decoration: underline;
-    color : antiquewhite;
-  }
+}
 
 .education-item {
     display: flex;
@@ -242,9 +243,8 @@ ul {
 }
 
 .btn-proj {
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
-    background-color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -309,3 +309,27 @@ ul {
     overflow-y: auto;
     padding-right: 20px;
 }
+
+.contact-content-box {
+    display: flex;
+    width: 28%;
+    align-items: center;
+    border: 2px solid #ddd; /* Add border */
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 2px;
+    text-wrap: wrap;
+    color: #333;
+}
+
+.contact-content-box:hover {
+    background-color: #333;
+    color: antiquewhite; /* Change background color on hover */
+}
+
+.contact-content-box a:link, a:visited {
+    text-decoration: underline;
+    color: #333;
+}
+
+

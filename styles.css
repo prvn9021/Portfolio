@@ -365,7 +365,7 @@ ul {
         width: 20%; /* Sidebar width adjusted to 20% */
         position: fixed; /* Keep the sidebar fixed */
         padding-top: 10px;
-        top: 8%;
+        top: 11%;
         height: 92%; /* Ensure it takes up the remaining height */
         overflow-y: auto; /* Allow scrolling if content exceeds height */
         z-index: 2; /* Ensure it stays above the content */

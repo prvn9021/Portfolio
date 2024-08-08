@@ -353,8 +353,8 @@ ul {
     .container {
         width: 72%; /* Keep the container at 80% */
         margin-right: 22%; /* Add 20% margin to the right */
-        margin-left: 20%;
-        left:0 /* Ensure it's aligned to the left */
+        margin-left: 8%;
+
         top: 10%;
         padding: 10px;
         box-shadow: none;

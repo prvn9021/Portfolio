@@ -333,7 +333,6 @@ ul {
     text-decoration: underline;
     color: #333;
 }
-
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -353,33 +352,35 @@ ul {
         box-shadow: none; /* Remove box-shadow for simpler design on mobile */
     }
     .sidebar {
-        width: 20%;
+        width: 100%; /* Sidebar takes full width */
+        position: relative; /* Avoid fixed positioning on small screens */
+        padding-top: 10px; /* Adjust padding */
     }
     #content {
-        margin-left: 20%;
-        width: 80%;
+        margin-left: 0; /* Remove left margin to avoid overlap */
+        width: 100%;
         padding: 10px;
     }
     .content-box, .content-box-exp, .content-box-proj {
         width: 100%;
         padding: 10px;
-        font-size: 0.9em; /* Reduced font size */
+        font-size: 0.8em; /* Further reduced font size */
     }
     .experience-item {
         width: 100%;
         height: auto;
     }
     .icon-grid {
-        grid-template-columns: repeat(auto-fill, 80px); /* Reduced column size */
+        grid-template-columns: repeat(auto-fill, 70px); /* Further reduced column size */
     }
     .icon-item {
-        width: 60px;
-        height: 60px;
+        width: 50px; /* Reduced icon size */
+        height: 50px;
     }
     .contact-content-box {
         width: 100%;
         padding: 5px; /* Reduced padding */
-        font-size: 0.9em; /* Reduced font size */
+        font-size: 0.8em; /* Further reduced font size */
     }
     .about-me-container {
         flex-direction: column;
@@ -388,12 +389,16 @@ ul {
     .fixed-content, .text-container {
         width: 100%;
         padding: 0;
-        font-size: 0.9em; /* Reduced font size */
+        font-size: 0.8em; /* Further reduced font size */
     }
     .image-container {
         margin-bottom: 10px; /* Reduced margin */
     }
+    .image-container img {
+        max-width: 80%; /* Reduced image size */
+        height: auto;
+    }
     .experience-details {
-        font-size: 0.9em; /* Reduced font size */
+        font-size: 0.8em; /* Further reduced font size */
     }
 }

@@ -355,7 +355,8 @@ ul {
         margin-right: 22%; /* Add 20% margin to the right */
         margin-left: 8%;
         margin-top:18%;
-        top: 10%;
+        top: 17%;
+        height:70%;
         padding: 10px;
         box-shadow: none;
         overflow-x: hidden; /* Prevent content from overflowing horizontally */

@@ -350,6 +350,7 @@ ul {
         top: 10%;
         left: 0;
         padding: 10px;
+        box-shadow: none; /* Remove box-shadow for simpler design on mobile */
     }
     .sidebar {
         width: 20%;
@@ -357,16 +358,19 @@ ul {
     #content {
         margin-left: 20%;
         width: 80%;
-    }
-    .content-box {
-        width: 100%;
         padding: 10px;
     }
+    .content-box, .content-box-exp, .content-box-proj {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9em; /* Reduced font size */
+    }
     .experience-item {
-        width: 90%;
+        width: 100%;
+        height: auto;
     }
     .icon-grid {
-        grid-template-columns: repeat(auto-fill, 100px);
+        grid-template-columns: repeat(auto-fill, 80px); /* Reduced column size */
     }
     .icon-item {
         width: 60px;
@@ -374,15 +378,22 @@ ul {
     }
     .contact-content-box {
         width: 100%;
+        padding: 5px; /* Reduced padding */
+        font-size: 0.9em; /* Reduced font size */
     }
     .about-me-container {
         flex-direction: column;
+        padding: 10px;
     }
-    .fixed-content {
+    .fixed-content, .text-container {
         width: 100%;
         padding: 0;
+        font-size: 0.9em; /* Reduced font size */
     }
-    .text-container {
-        padding: 0;
+    .image-container {
+        margin-bottom: 10px; /* Reduced margin */
+    }
+    .experience-details {
+        font-size: 0.9em; /* Reduced font size */
     }
 }

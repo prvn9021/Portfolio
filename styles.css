@@ -336,30 +336,32 @@ ul {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
-        overflow: auto;
-        min-width: 100%; /* Adjust min-width for smaller screens */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        min-width: 100%;
     }
     .header-content {
         width: 100%;
         padding: 0 10px;
     }
     .container {
-        width: 100%;
-        height: auto;
+        width: 80%; /* Keep the container at 80% */
+        margin-right: 20%; /* Add 20% margin to the right */
+        left: 0; /* Ensure it's aligned to the left */
         top: 10%;
-        left: 0;
         padding: 10px;
-        box-shadow: none; /* Remove box-shadow for simpler design on mobile */
+        box-shadow: none;
+        overflow-x: hidden; /* Prevent content from overflowing horizontally */
     }
     .sidebar {
         width: 100%; /* Sidebar takes full width */
-        position: relative; /* Avoid fixed positioning on small screens */
-        padding-top: 10px; /* Adjust padding */
+        position: relative;
+        padding-top: 10px;
     }
     #content {
-        margin-left: 0; /* Remove left margin to avoid overlap */
-        width: 100%;
+        margin-left: 0; /* Remove left margin */
+        width: 80%; /* Set content width to 80% */
         padding: 10px;
+        overflow-x: hidden; /* Prevent overflow */
     }
     .content-box, .content-box-exp, .content-box-proj {
         width: 100%;
@@ -380,7 +382,7 @@ ul {
     .contact-content-box {
         width: 100%;
         padding: 5px; /* Reduced padding */
-        font-size: 0.8em; /* Further reduced font size */
+        font-size: 0.8em;
     }
     .about-me-container {
         flex-direction: column;
@@ -389,16 +391,16 @@ ul {
     .fixed-content, .text-container {
         width: 100%;
         padding: 0;
-        font-size: 0.8em; /* Further reduced font size */
+        font-size: 0.8em;
     }
     .image-container {
-        margin-bottom: 10px; /* Reduced margin */
+        margin-bottom: 10px;
     }
     .image-container img {
-        max-width: 80%; /* Reduced image size */
+        max-width: 80%;
         height: auto;
     }
     .experience-details {
-        font-size: 0.8em; /* Further reduced font size */
+        font-size: 0.8em;
     }
 }

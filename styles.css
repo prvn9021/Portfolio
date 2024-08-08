@@ -342,14 +342,19 @@ ul {
         overflow-x: hidden; /* Prevent horizontal scrolling */
         min-width: 100%;
     }
+
+    .education-item {
+        margin-left: 0%
+    }
     .header-content {
         width: 100%;
         padding: 0 10px;
     }
     .container {
-        width: 80%; /* Keep the container at 80% */
-        margin-right: 20%; /* Add 20% margin to the right */
-        left: 0; /* Ensure it's aligned to the left */
+        width: 72%; /* Keep the container at 80% */
+        margin-right: 22%; /* Add 20% margin to the right */
+        margin-left: 20%;
+        right:0 /* Ensure it's aligned to the left */
         top: 10%;
         padding: 10px;
         box-shadow: none;

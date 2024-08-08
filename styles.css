@@ -333,6 +333,9 @@ ul {
     text-decoration: underline;
     color: #333;
 }
+
+/* Mobile CSS started here*/
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -353,13 +356,17 @@ ul {
         overflow-x: hidden; /* Prevent content from overflowing horizontally */
     }
     .sidebar {
-        width: 100%; /* Sidebar takes full width */
-        position: relative;
+        width: 20%; /* Sidebar width adjusted to 20% */
+        position: fixed; /* Keep the sidebar fixed */
         padding-top: 10px;
+        top: 8%;
+        height: 92%; /* Ensure it takes up the remaining height */
+        overflow-y: auto; /* Allow scrolling if content exceeds height */
+        z-index: 2; /* Ensure it stays above the content */
     }
     #content {
-        margin-left: 0; /* Remove left margin */
-        width: 80%; /* Set content width to 80% */
+        margin-left: 20%; /* Ensure content starts after the sidebar */
+        width: 60%; /* Set content width to 60% to fit alongside sidebar */
         padding: 10px;
         overflow-x: hidden; /* Prevent overflow */
     }
@@ -404,3 +411,4 @@ ul {
         font-size: 0.8em;
     }
 }
+
